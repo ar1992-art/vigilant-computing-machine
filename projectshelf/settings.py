@@ -39,6 +39,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     "https://site--backend--wwcs7tcpkv46.code.run",
+    "https://site--frontend--wwcs7tcpkv46.code.run",
     "site--backend--wwcs7tcpkv46.code.run"]
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
@@ -46,7 +47,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://site--backend--wwcs7tcpkv46.code.run",
     "site--backend--wwcs7tcpkv46.code.run"
 ]
-
+CORS_ALLOW_CREDENTIALS = True  
 ROOT_URLCONF = 'projectshelf.urls'
 
 TEMPLATES = [{
