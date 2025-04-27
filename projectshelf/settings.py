@@ -36,7 +36,16 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    "https://site--backend--wwcs7tcpkv46.code.run",
+    "site--backend--wwcs7tcpkv46.code.run"]
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "https://your-frontend-domain.com",
+    "https://site--backend--wwcs7tcpkv46.code.run",
+    "site--backend--wwcs7tcpkv46.code.run"
+]
 
 ROOT_URLCONF = 'projectshelf.urls'
 
