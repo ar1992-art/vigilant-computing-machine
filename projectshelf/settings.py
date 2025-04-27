@@ -49,6 +49,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 CORS_ALLOW_CREDENTIALS = True  
 ROOT_URLCONF = 'projectshelf.urls'
+CORS_ALLOW_ALL_ORIGINS = True
 
 TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
