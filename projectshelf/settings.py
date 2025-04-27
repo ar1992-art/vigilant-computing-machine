@@ -126,8 +126,17 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 DEBUG = False
 ALLOWED_HOSTS = ['*']  # or your custom domain later
 CORS_ALLOWED_ORIGINS = [
-    "https://your-frontend-site.nsflank.io",
+    'http://localhost:3000',
+    "https://site--backend--wwcs7tcpkv46.code.run",
+    "https://site--frontend--wwcs7tcpkv46.code.run",
+    "site--backend--wwcs7tcpkv46.code.run"]
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "https://your-frontend-domain.com",
+    "https://site--backend--wwcs7tcpkv46.code.run",
+    "site--backend--wwcs7tcpkv46.code.run"
 ]
+CORS_ALLOW_CREDENTIALS = True  
 
 STATIC_URL = '/static/'
 
