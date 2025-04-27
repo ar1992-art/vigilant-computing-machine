@@ -6,3 +6,4 @@ django-cors-headers
 Pillow               # for ImageField support
 gunicorn>=20.0
 whitenoise>=6.0
+dj_rest_auth
