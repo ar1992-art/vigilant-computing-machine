@@ -27,6 +27,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -117,3 +118,11 @@ ALLOWED_HOSTS = ['*']  # or your custom domain later
 CORS_ALLOWED_ORIGINS = [
     "https://your-frontend-site.nsflank.io",
 ]
+
+STATIC_URL = '/static/'
+
+# For production (important for WhiteNoise)
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Optional for better static serving (recommended)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
