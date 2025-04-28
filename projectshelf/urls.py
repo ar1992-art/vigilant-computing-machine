@@ -15,7 +15,6 @@ from users.views import RegisterView, UserMeView
 # DRF router for your apps
 from rest_framework.routers import DefaultRouter
 from portfolio.views import PortfolioViewSet, CaseStudyViewSet
-from analytics.views import AnalyticsViewSet
 
 router = DefaultRouter()
 router.register(r'portfolio', PortfolioViewSet, basename='portfolio')

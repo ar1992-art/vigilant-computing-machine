@@ -4,13 +4,19 @@ from rest_framework import serializers
 from .models import Portfolio, CaseStudy
 
 class CaseStudySerializer(serializers.ModelSerializer):
-    # Mark portfolio as read-only so DRF won't expect it on input
+    owner_username = serializers.CharField(
+        source='portfolio.user.username',
+        read_only=True
+    )
+
     class Meta:
         model = CaseStudy
-        fields = '__all__'
-        extra_kwargs = {
-            'portfolio': {'read_only': True},
-        }
+        fields = [
+            'id','title','slug','overview',
+            'media_gallery','timeline','tools_used',
+            'outcomes','portfolio','owner_username'
+        ]
+        extra_kwargs = {'portfolio': {'read_only': True}}
 
 class PortfolioSerializer(serializers.ModelSerializer):
     case_studies = CaseStudySerializer(many=True, read_only=True)
